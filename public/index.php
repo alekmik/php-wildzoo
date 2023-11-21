@@ -25,7 +25,7 @@ $elephant->threatenedLevel = 'LC';
 
 $animals = [$lion, $parrot, $elephant];
 
-/***************************************/
+
 /***************************************/
 
 
