@@ -2,11 +2,67 @@
 
 class Animal
 {
-    public string $name;
-    public float $size = 100;
-    public bool $carnivorous = false;
-    public int $pawNumber;
-    public string $threatenedLevel = 'NE';
+    private string $name;
+    private float $size;    
+    private bool $carnivorous = false;
+    private int $pawNumber;
+    private string $threatenedLevel = 'NE';
+    
+    //constructeur
+    public function __construct(string $name, int $pawNumber)
+    {
+        $this->name = $name;
+        $this->setPawNumber($pawNumber);
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+    //function getSize retourner la valeur
+    public function getSize(): float
+    {
+        return $this->size;
+    }
+    //function setSize pour attribuer une valeur à la propriété privée size
+    public function setSize(int $size): void
+    {
+        //minimum size at 1
+        if($size < 1) {
+            $size = 1;
+        }
+        $this->size = $size;
+    }
+    public function isCarnivorous():bool
+    {
+        return $this->carnivorous;
+    }
+    public function setCarnivorous(int $carnivorous): void
+    {
+        $this->carnivorous = $carnivorous;
+    }
+
+    public function getPawNumber(): int
+    {
+        return $this->pawNumber;
+    }
+    //
+    public function setPawNumber(int $pawNumber): void
+    {
+        if($pawNumber < 0) {
+            $pawNumber = 0;
+        }
+        $this->pawNumber = $pawNumber;
+    }
+
+    public function getThreatenedLevel() : string
+    {
+        return $this -> threatenedLevel;
+    }
+    public function setThreatenedLevel($threatenedLevel) : void
+    {
+        $this -> threatenedLevel = $threatenedLevel;
+    }
 
     public function speak(string $lang = 'fr'): string
     {
