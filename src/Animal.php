@@ -4,7 +4,9 @@ class Animal
 {
     public const CENTIMETERS_IN_METER = 100;
     public const SIZE_UNIT_CHANGE_LIMIT = 100;
-    public const THREATENED_LEVELS = ['NE', 'DD', 'LC', 'NT', 'VU', 'EN', 'CR', 'EW', 'EX'];
+    private const THREATENED_LEVELS = [
+        "EX","EW","CR","EN","VU","NT","LC","DD","NE",
+    ];
 
     private string $name;
     private float $size = 100;
