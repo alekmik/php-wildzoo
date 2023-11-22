@@ -4,7 +4,7 @@
 /******** ⚠️ WORK HERE ONLY ⚠️ ***********/
 
 require __DIR__ . '/../src/Animal.php';
-
+var_dump(Animal::CENTIMETERS_IN_METER);
 $lion = new Animal('lion', 4);
 $lion->setCarnivorous(true);
 $lion->setSize(70);
